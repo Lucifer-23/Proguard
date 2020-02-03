@@ -8,15 +8,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-/**
- * @author Lance
- * @date 2017/12/28
- */
-
 public class MyProvider extends ContentProvider {
 
     public static final String TAG = "MyProvider";
-
 
     @Override
     public boolean onCreate() {

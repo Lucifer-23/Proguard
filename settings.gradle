@@ -1,1 +1,1 @@
-include ':app', ':proxy-guard-core', ':proxy-guard-tools'
+include ':app', ':proxy-guard-core', ':proxy-guard-encrypt', ':proxy-guard-tools'

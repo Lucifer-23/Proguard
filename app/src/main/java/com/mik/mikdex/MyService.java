@@ -6,11 +6,6 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-/**
- * @author Lance
- * @date 2017/12/28
- */
-
 public class MyService extends Service {
 
     public static final String TAG = "MyService";

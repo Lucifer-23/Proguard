@@ -1,0 +1,27 @@
+gradle.ext {
+    // 虚拟机应用程序版本号
+    VERSION_CODE = 1
+    // 虚拟机应用程序版本名
+    VERSION_NAME = "1.0.1"
+
+    // 虚拟机应用程序包名
+    APPLICATION_ID = 'com.mogu.vid'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "jr1x5k",// openInstall key  华为杀毒引擎会识别此key
+            JPUSH_APPKEY       : "7fe70a9fddddfd41fcc9", //TODO 注册的包名对应的 Appkey.
+            JPUSH_CHANNEL      : "developer" //暂时填写默认值即可.
+    ]
+
+    // 版本号
+    PLAYER = "\"start.mp3\""
+    // 包名
+    HOST = "\"com.hello.mushroom\""
+
+    // 签名相关
+    STORE_FILE = 'configs/sign/mushroom.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    OPENINSTALL = "\"jr1x5k\""
+}

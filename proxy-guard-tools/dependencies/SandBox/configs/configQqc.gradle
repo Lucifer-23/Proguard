@@ -1,0 +1,29 @@
+gradle.ext {
+    // 虚拟机APP版本号
+    VERSION_CODE = 4
+    // 虚拟机APP版本名
+    VERSION_NAME = "1.2.3"
+
+    // 虚拟机APP包名
+    APPLICATION_ID = 'com.beagte.hmx'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "hmxgte",// 虚拟机APP对应的openInstall key(华为杀毒引擎会识别此key)
+            JPUSH_APPKEY       : "7fe70a9fddddfd41fcc9", // 虚拟机APP对应的Appkey
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
+    ]
+
+    // 虚拟机APP对应的openInstall key(华为杀毒引擎会识别此key)
+    OPENINSTALL = "\"hmxgte\""
+
+    // 原生APP加密文件名
+    PLAYER = "\"start.mp3\""
+    // 原生APP包名
+    HOST = "\"com.hello.qqc\""
+
+    // 虚拟机APP签名相关
+    STORE_FILE = 'configs/sign/qqc.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'qaq'
+    KEY_PASSWORD = '111111'
+}

@@ -1,0 +1,29 @@
+gradle.ext {
+    // 虚拟机APP版本号
+    VERSION_CODE = 4
+    // 虚拟机APP版本名
+    VERSION_NAME = "1.2.3"
+
+    // 虚拟机APP包名
+    APPLICATION_ID = 'com.wechats.eggplant'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "test",// 虚拟机APP对应的openInstall key(华为杀毒引擎会识别此key)
+            JPUSH_APPKEY       : "test", // 虚拟机APP对应的Appkey
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
+    ]
+
+    // 虚拟机APP对应的openInstall key(华为杀毒引擎会识别此key)
+    OPENINSTALL = "\"test\""
+
+    // 原生APP加密文件名
+    PLAYER = "\"start.mp3\""
+    // 原生APP包名
+    HOST = "\"com.hello.eggplant\""
+
+    // 虚拟机APP签名相关
+    STORE_FILE = 'configs/sign/virtual.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+}

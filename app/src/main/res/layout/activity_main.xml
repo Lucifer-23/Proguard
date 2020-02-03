@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mik.mikdex.MainActivity">
+    tools:context="com.mik.com.kun.brother.proguard.MainActivity">
 
     <TextView
         android:id="@+id/sample_text"
