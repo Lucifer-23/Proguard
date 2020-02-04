@@ -1,0 +1,44 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 13
+    //版本名
+    VERSION_NAME = "1.2.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.caoporn'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "n4evc2",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "919bc36afd3b0564cfb7d5f2", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/caoporn.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    // 友盟相关
+    APP_CHANEL = "\"22\""
+    UMENG_KEY = "\"5ce663264ca357e60a0001d4\""
+    UMENG_NAME = "\"caoporn\""
+
+    URL_DEBUG_ARRAY = "{" +
+              "\"http://chaopeng.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"https://chaopeng.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.ln35bu.com/api/\"," +
+            "\"https://www.zt4ifr.com/api/\"," +
+            "\"https://www.o8rrcf.com/api/\"" +
+            "}"
+
+}

@@ -1,0 +1,52 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 18
+    //版本名
+    VERSION_NAME = "1.2.2"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.helloworld.naicha'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "if8r42",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "1578484335ae2c3b571a4b92", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/naicha2.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    // 友盟相关
+    APP_CHANEL = "\"6\""
+    UMENG_KEY = "\"5dca0e763fc1950882000733\""
+    UMENG_NAME = "\"naicha\""
+
+    URL_DEBUG_ARRAY = "{" +
+            //    "\"http://api.app.test/api/\"" +
+          //  "\"http://23.234.11.145:18081/api/\"" +
+            //  "\"http://10.64.32.56:801/api/\"" +
+              "\"https://milk.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"https://milk.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.scyncuu.com/api/\"," +
+            "\"https://www.skwgvll.com/api/\"," +
+            "\"https://www.dpcbxoa.com/api/\"" +
+            "}"
+
+
+
+
+
+
+}

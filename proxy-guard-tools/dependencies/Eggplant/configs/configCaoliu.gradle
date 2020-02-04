@@ -1,0 +1,52 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 6
+    //版本名
+    VERSION_NAME = "1.0.1"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.caoliu'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "ucuarq",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            UMENG_CHANNEL : "default",
+            JPUSH_APPKEY : "668e55fb8dce089fee7ce4ef", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/caoliu.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    // 友盟相关
+    APP_CHANEL = "\"27\""
+    UMENG_KEY = "\"5dde03180cafb2139c000344\""
+    UMENG_NAME = "\"caoliu\""
+    URL_DEBUG_ARRAY = "{" +
+
+            //  "\"http://10.64.32.56:801/api/\"" +
+              "\"https://caoliu.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"https://caoliu.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://app.70vt9vgp.com/api/\"," +
+            "\"https://app.syw2sfmj.com/api/\"," +
+            "\"https://app.1hvxuadm.com/api/\"" +
+            "}"
+
+
+
+
+
+
+
+}

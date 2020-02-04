@@ -1,0 +1,53 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 13
+    //版本名
+    VERSION_NAME = "1.2.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.corn'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "klupfl",//  openInstall key
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "1c84ad2e4a9a5e67168c9063", //  极光 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/corn.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    //应用编号
+    APP_CHANEL = "\"12\""
+    // 友盟相关
+    UMENG_KEY = "\"5ce660364ca3576c5300087f\""
+    UMENG_NAME = "\"corn\""
+
+
+    //服务器配置
+    //开发
+    URL_DEBUG_ARRAY = "{" +
+            "\"http://yumi.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"http://yumi.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.pnobpf.com/api/\"," +
+            "\"https://www.c0gn9l.com/api/\"," +
+            "\"https://www.anxttb.com/api/\"" +
+            "}"
+
+}
+
+
+
+
+

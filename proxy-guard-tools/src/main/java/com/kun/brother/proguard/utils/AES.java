@@ -11,13 +11,25 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class AES {
 
-    // 16字节
+    /**
+     * 相关产品对应的类别常量
+     * */
+    // 沙盒产品
+    public static final String PRODUCT_SANDBOX      = "SandBox";
+    // 茄子产品
+    public static final String PRODUCT_EGGPLANT     = "Eggplant";
+
+    /**
+     * 相关产品对应的密码常量
+     * */
     // SandBox
-    public static final String DEFAULT_PWD = "C9h1Cwk7NgOt6J25";
+    public static final String PWD_PRODUCT_SANDBOD      = "C9h1Cwk7NgOt6J25";
     // Eggplant
-    // public static final String DEFAULT_PWD = "Tc3pH76AnvrmemkB";
+    public static final String PWD_PRODUCT_EGGPLANT     = "Tc3pH76AnvrmemkB";
+
     // 填充方式
     private static final String algorithmStr = "AES/ECB/PKCS5Padding";
+
     private static Cipher encryptCipher;
     private static Cipher decryptCipher;
 
@@ -61,5 +73,18 @@ public class AES {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String getPwd(String product) {
+        String pwd = "";
+        switch (product) {
+            case PRODUCT_SANDBOX:
+                pwd = PWD_PRODUCT_SANDBOD;
+                break;
+            case PRODUCT_EGGPLANT:
+                pwd = PWD_PRODUCT_EGGPLANT;
+                break;
+        }
+        return pwd;
     }
 }

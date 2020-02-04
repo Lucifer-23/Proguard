@@ -1,0 +1,52 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 13
+    //版本名
+    VERSION_NAME = "1.2.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.tangerine'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "hvz010",//  openInstall key
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "559f896123ff29c1b657535f", //  极光 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/tangerine.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    //应用编号
+    APP_CHANEL = "\"15\""
+    // 友盟相关
+    UMENG_KEY = "\"5ce660de570df3f16000009b\""
+    UMENG_NAME = "\"tangerine\""
+
+    //服务器配置
+    //开发
+    URL_DEBUG_ARRAY = "{" +
+            "\"http://miju.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"http://miju.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.jaoo7x.com/api/\"," +
+            "\"https://www.4hbzq3.com/api/\"," +
+            "\"https://www.qrb88i.com/api/\"" +
+            "}"
+
+}
+
+
+
+
+

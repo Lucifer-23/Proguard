@@ -1,0 +1,51 @@
+gradle.ext {
+
+    // 版本号
+    VERSION_CODE = 18
+    // 版本名
+    VERSION_NAME = "2.1.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+
+    // application package name
+    APPLICATION_ID = 'com.zyz.zmw'
+
+    // OpenInstall APP KEY
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "gkixcr",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "b863c269e87a9aabfaf44f58", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+    // signature
+    STORE_FILE ='configs/sign/subtitlenet.jks'
+    STORE_PASSWORD ='111111'
+    KEY_ALIAS ='key0'
+    KEY_PASSWORD  ='111111'
+
+    // umeng
+    UMENG_KEY =  "\"5d47de7b4ca3578c39000abb\""
+    UMENG_NAME =  "\"subtitlenet\""
+
+    // server config
+    APP_CHANEL = "\"25\""
+
+   // GAME_KEY =  "\"xhi#\$5.te1@4_69^D(s0s93o\""
+    // 测试环境 http://banana.qqcapp2.com/ 基本不用
+    URL_DEBUG_ARRAY    = "{" +
+            // "\"https://banana.qzappapia456.com/api/\"" +
+               "\"http://10.64.32.56:801/api/\"" +
+            "}"
+
+    // UAT 预生产环境 提测时用
+    URL_UAT_ARRAY = "{" +
+          //  "\"http://api.9gbqkip.com:10801/api/\"" +
+             "\"https://zimuwang.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY=  "{" +
+            "\"https://jk.wlcf2qkx.com/api/\"," +
+            "\"https://jk.xtqt62ci.com/api/\"," +
+            "\"https://jk.3vmun37q.com/api/\"" +
+            "}"
+}

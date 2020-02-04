@@ -1,0 +1,51 @@
+gradle.ext {
+
+    // 版本号
+    VERSION_CODE = 86
+    // 版本名
+    VERSION_NAME = "2.4.2"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+
+    // application package name
+    APPLICATION_ID = 'com.hello.banana'
+
+    // OpenInstall APP KEY
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "y6iil2",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "6d18f04710b323ceb93b1d08", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+    // signature
+    STORE_FILE ='configs/sign/banana.jks'
+    STORE_PASSWORD ='111111'
+    KEY_ALIAS ='key0'
+    KEY_PASSWORD  ='111111'
+
+    // umeng
+    UMENG_KEY =  "\"5c6a8342b465f51d10001591\""
+    UMENG_NAME =  "\"banana\""
+
+    // server config
+    APP_CHANEL = "\"4\""
+
+
+    // 测试环境 http://banana.qqcapp2.com/ 基本不用
+    URL_DEBUG_ARRAY    = "{" +
+            // "\"https://banana.qzappapia456.com/api/\"" +
+               "\"http://10.64.32.56:801/api/\"" +
+            "}"
+
+    // UAT 预生产环境 提测时用
+    URL_UAT_ARRAY = "{" +
+          //  "\"http://api.9gbqkip.com:10801/api/\"" +
+             "\"https://banana.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY=  "{" +
+            "\"https://www.xiangjiaoshipinqwer.com/api/\"," +
+            "\"https://www.xjshipinwer.com/api/\"," +
+            "\"https://www.xjinter2u.com/api/\"" +
+            "}"
+}

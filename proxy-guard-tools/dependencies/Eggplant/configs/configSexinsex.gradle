@@ -1,0 +1,53 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 13
+    //版本名
+    VERSION_NAME = "1.2.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.sexinsex'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "ag9nn7",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "214cd098cea54d998345d014", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/sexinsex.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    // 友盟相关
+    APP_CHANEL = "\"20\""
+    UMENG_KEY = "\"5ce662ef0cafb2494500122f\""
+    UMENG_NAME = "\"sexinsex\""
+    GAME_KEY = "\"xhi#\$5.te1@4_69^D(s0s93o\""
+    URL_DEBUG_ARRAY = "{" +
+            //    "\"http://api.app.test/api/\"" +
+          //  "\"http://23.234.11.145:18081/api/\"" +
+            //  "\"http://10.64.32.56:801/api/\"" +
+              "\"https://sis.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"https://sis.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.jyx77ox8.com/api/\"," +
+            "\"https://www.eahb250f.com/api/\"," +
+            "\"https://www.3quf3mqs.com/api/\"" +
+            "}"
+
+
+
+
+
+
+
+}

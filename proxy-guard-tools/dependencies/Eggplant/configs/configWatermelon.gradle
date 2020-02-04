@@ -1,0 +1,52 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 14
+    //版本名
+    VERSION_NAME = "1.2.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.watermelon'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "q7tbb0",//  openInstall key
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "f1a6c2fe070ffc991dbe234c", //  极光 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/watermelon.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    //应用编号
+    APP_CHANEL = "\"19\""
+    // 友盟相关
+    UMENG_KEY = "\"5ce6620c0cafb2cc6f0003b9\""
+    UMENG_NAME = "\"watermelon\""
+
+    //服务器配置
+    //开发
+    URL_DEBUG_ARRAY = "{" +
+            "\"http://xigua.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"http://xigua.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.icpzld.com/api/\"," +
+            "\"https://www.ifca4b.com/api/\"," +
+            "\"https://www.ylxnw6.com/api/\"" +
+            "}"
+
+}
+
+
+
+
+

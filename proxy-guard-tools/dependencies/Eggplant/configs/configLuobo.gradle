@@ -1,0 +1,55 @@
+gradle.ext {
+
+    //版本号
+    VERSION_CODE = 19
+    //版本名
+    VERSION_NAME = "1.2.1"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+    // 应用程序包名
+    APPLICATION_ID = 'com.hello.luobo'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "eld8wj",//  openInstall key
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "101838edeb6c3e8d4ad31481", //  极光 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+
+    SUPPORT_VERSION = "28.0.0"
+    // 签名相关
+    STORE_FILE = 'configs/sign/luobo.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+    //应用编号
+    APP_CHANEL = "\"7\""
+    // 友盟相关
+    UMENG_KEY = "\"5ce659764ca3572e640009ba\""
+    UMENG_NAME = "\"luobo\""
+
+    //服务器配置
+    //开发
+    URL_DEBUG_ARRAY = "{" +
+            //    "\"http://api.app.test/api/\"" +
+          //  "\"http://23.234.11.145:18081/api/\"" +
+            //  "\"http://10.64.32.56:801/api/\"" +
+              "\"https://lobo.qzappapia456.com/api/\"" +
+            "}"
+    // UAT环境
+    URL_UAT_ARRAY = "{" +
+            "\"https://lobo.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"https://www.6tcj5ise.com/api/\"," +
+            "\"https://www.zi2jbg0y.com/api/\"," +
+            "\"https://www.yg1gmu4n.com/api/\"" +
+            "}"
+
+}
+
+
+
+
+

@@ -1,0 +1,51 @@
+gradle.ext {
+
+    // 版本号
+    VERSION_CODE = 18
+    // 版本名
+    VERSION_NAME = "2.1.0"
+    //服务器版本
+    VERSION_SERVER = "\"1.5.0\""
+
+    // application package name
+    APPLICATION_ID = 'com.zyz.jcao'
+
+    // OpenInstall APP KEY
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "ttrycu",// openInstall
+            JPUSH_PKGNAME : APPLICATION_ID,
+            JPUSH_APPKEY : "66bfa17fae1326e40d49c527", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+    ]
+    // signature
+    STORE_FILE ='configs/sign/ninegrass.jks'
+    STORE_PASSWORD ='111111'
+    KEY_ALIAS ='key0'
+    KEY_PASSWORD  ='111111'
+
+    // umeng
+    UMENG_KEY =  "\"5d47e07f3fc195590500028f\""
+    UMENG_NAME =  "\"ninegrass\""
+
+    // server config
+    APP_CHANEL = "\"26\""
+
+   // GAME_KEY =  "\"xhi#\$5.te1@4_69^D(s0s93o\""
+    // 测试环境 http://banana.qqcapp2.com/ 基本不用
+    URL_DEBUG_ARRAY    = "{" +
+            // "\"https://banana.qzappapia456.com/api/\"" +
+               "\"http://10.64.32.56:801/api/\"" +
+            "}"
+
+    // UAT 预生产环境 提测时用
+    URL_UAT_ARRAY = "{" +
+          //  "\"http://api.9gbqkip.com:10801/api/\"" +
+             "\"https://jiucao.qzappapia456.com/api/\"" +
+            "}"
+    // 生产环境
+    URL_ARRAY=  "{" +
+            "\"https://jk.duom3hdr.com/api/\"," +
+            "\"https://jk.46qspxur.com/api/\"," +
+            "\"https://jk.htybujyn.com/api/\"" +
+            "}"
+}

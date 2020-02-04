@@ -13,16 +13,18 @@ import java.io.RandomAccessFile;
 
 public class Main {
 
+    private static String product = AES.PRODUCT_SANDBOX;
+
     public static void main(String[] args) throws Exception {
         /**
          * 1、制作只包含解密代码的dex文件
          */
         File classesDex = jar2dex();
 
-        AES.init(AES.DEFAULT_PWD);
-        deleteFile(new File("proxy-guard-tools/apk/SandBox"));
+        AES.init(AES.getPwd(product));
+        deleteFile(new File("proxy-guard-tools/apk/" + product));
 
-        File targetApkRootDir = new File("proxy-guard-tools/target/SandBox");
+        File targetApkRootDir = new File("proxy-guard-tools/target/" + product);
         File[] productFlavorDirs = targetApkRootDir.listFiles();
         for (File productFlavor : productFlavorDirs) {
             File productFlavorRelease = new File(productFlavor.getAbsolutePath(), "release");
@@ -31,8 +33,10 @@ public class Main {
                 for (File file : outputs) {
                     if (file.getName().endsWith("apk")) {
                         String flavor = productFlavor.getName();
-                        File apkTemp = new File("proxy-guard-tools/apk/SandBox/" + flavor + "/temp");
-                        String newApkOriginPath = "proxy-guard-tools/apk/SandBox/"
+                        File apkTemp = new File("proxy-guard-tools/apk/" + product + File.separator + flavor + "/temp");
+                        String newApkOriginPath = "proxy-guard-tools/apk/"
+                                + product
+                                + File.separator
                                 + flavor
                                 + File.separator
                                 + file.getName();
@@ -59,8 +63,8 @@ public class Main {
 
     private static File jar2dex() throws Exception {
         // 1.1 解压aar获得classes.jar
-        File aarFile = new File("proxy-guard-tools/dependencies/SandBox/proxy-guard-core-release.aar");
-        File aarTemp = new File("proxy-guard-tools/build/SandBox/proxy-guard-tools-temp");
+        File aarFile = new File("proxy-guard-tools/dependencies/" + product + "/proxy-guard-core-release.aar");
+        File aarTemp = new File("proxy-guard-tools/build/" + product + "/proxy-guard-tools-temp");
         Zip.unZip(aarFile, aarTemp);
 
         // 1.2 执行dx命令将jar变成dex文件
@@ -147,7 +151,7 @@ public class Main {
         // apksigner sign --ks jks文件地址 --ks-key-alias 别名 --ks-pass pass:jsk密码
         // --key-pass pass:别名密码 --out out.apk in.apk
 
-        File signedConfig = new File("proxy-guard-tools/dependencies/SandBox/configs/config" + productFlavor + ".gradle");
+        File signedConfig = new File("proxy-guard-tools/dependencies/" + product + "/configs/config" + productFlavor + ".gradle");
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(signedConfig)));
         String keyAlias = "";
         String ksPass = "";
@@ -155,17 +159,17 @@ public class Main {
         String line = "";
         while ((line = br.readLine()) != null) {
             if (line.contains("KEY_ALIAS")) {
-                keyAlias = line.substring(line.indexOf("'") + 1, line.length() - 1);
+                keyAlias = fetchValue(line);
             } else if (line.contains("STORE_PASSWORD")) {
-                ksPass = line.substring(line.indexOf("'") + 1, line.length() - 1);
+                ksPass = fetchValue(line);
             } else if (line.contains("KEY_PASSWORD")) {
-                keyPass = line.substring(line.indexOf("'") + 1, line.length() - 1);
+                keyPass = fetchValue(line);
             }
         }
 
         File signedApk = new File(newApkOriginPath.replace(".apk",
                 "_signed_aligned.apk"));
-        File jks = new File("proxy-guard-tools/dependencies/SandBox/configs/sign/" + productFlavor + ".jks");
+        File jks = new File("proxy-guard-tools/dependencies/" + product + "/configs/sign/" + productFlavor + ".jks");
 
         process = Runtime.getRuntime().exec("cmd /c apksigner sign --ks "
                 + jks.getAbsolutePath()
@@ -206,5 +210,9 @@ public class Main {
         } else {
             file.delete();
         }
+    }
+
+    private static String fetchValue(String keyValue) {
+        return keyValue.substring(keyValue.indexOf("'") + 1, keyValue.length() - 1);
     }
 }
