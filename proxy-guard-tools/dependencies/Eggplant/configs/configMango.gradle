@@ -1,52 +1,50 @@
 gradle.ext {
-
-    //版本号
+    // 版本号
     VERSION_CODE = 19
-    //版本名
+    // 版本名
     VERSION_NAME = "1.2.1"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
     // 应用程序包名
     APPLICATION_ID = 'com.hello.mango'
 
     MANIFESTPLACEHOLDERS = [
-            OPEN_INSTALL_APPKEY: "pr93zz",//  openInstall key
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "db464cfce78a2d7e9de5b97a", //  极光 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            OPEN_INSTALL_APPKEY: "pr93zz",// openInstall key
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "db464cfce78a2d7e9de5b97a", // 极光上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     SUPPORT_VERSION = "28.0.0"
+
     // 签名相关
     STORE_FILE = 'configs/sign/mango.jks'
     STORE_PASSWORD = '111111'
     KEY_ALIAS = 'key0'
     KEY_PASSWORD = '111111'
-    //应用编号
+
+    // 应用编号
     APP_CHANEL = "\"10\""
+
     // 友盟相关
     UMENG_KEY = "\"5ce65f1f3fc1951ef7000b9f\""
     UMENG_NAME = "\"mango\""
 
-    //服务器配置
-    //开发
+    // 服务器配置
+    // 开发
     URL_DEBUG_ARRAY = "{" +
             "\"http://mongo.qzappapia456.com/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"http://mongo.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
     URL_ARRAY = "{" +
             "\"https://www.exthtj.com/api/\"," +
             "\"https://www.fqrymr.com/api/\"," +
             "\"https://www.aswchd.com/api/\"" +
             "}"
-
 }
-
-
-
-
-

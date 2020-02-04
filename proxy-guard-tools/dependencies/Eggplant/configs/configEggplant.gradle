@@ -12,7 +12,7 @@ gradle.ext {
             OPEN_INSTALL_APPKEY: "s8pn91",// openInstall
             JPUSH_PKGNAME      : APPLICATION_ID,
             UMENG_CHANNEL      : "default",
-            JPUSH_APPKEY       : "edafecfaa132ffcdeeed80bb", // 注册的包名对应的Appkey.
+            JPUSH_APPKEY       : "edafecfaa132ffcdeeed80bb", // 极光注册的包名对应的Appkey.
             JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
@@ -31,19 +31,13 @@ gradle.ext {
 
     // 开发环境
     URL_DEBUG_ARRAY = "{" +
-            // "\"https://qiezi.qzappapia456.com/api/\"" +
-            //  "\"https://qiezi2.qzappapia456.com/api/\"" +
-            //  "\"http://10.64.32.53:8088/api/\"" +
-            //        "\"http://10.64.32.56:801/api/\"" +
-            // "\"http://10.64.32.199:8080/api/\"" +
             "\"http://api.9gbqkip.com:10801/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"https://qiezi.qzappapia456.com/api/\"" +
-            // "\"http://api.9gbqkip.com:10801/api/\"" +
             "}"
-
 
     // 生产环境
     URL_ARRAY = "{" +

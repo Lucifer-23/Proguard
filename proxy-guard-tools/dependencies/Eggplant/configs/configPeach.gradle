@@ -1,52 +1,50 @@
 gradle.ext {
-
-    //版本号
+    // 版本号
     VERSION_CODE = 13
-    //版本名
+    // 版本名
     VERSION_NAME = "1.2.0"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
     // 应用程序包名
     APPLICATION_ID = 'com.hello.peach'
 
     MANIFESTPLACEHOLDERS = [
-            OPEN_INSTALL_APPKEY: "woi4gr",//  openInstall key
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "db6c81c2a8753be65746c9c3", //  极光 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            OPEN_INSTALL_APPKEY: "woi4gr",// openInstall key
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "db6c81c2a8753be65746c9c3", // 极光上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     SUPPORT_VERSION = "28.0.0"
+
     // 签名相关
     STORE_FILE = 'configs/sign/peach.jks'
     STORE_PASSWORD = '111111'
     KEY_ALIAS = 'key0'
     KEY_PASSWORD = '111111'
-    //应用编号
+
+    // 应用编号
     APP_CHANEL = "\"11\""
+
     // 友盟相关
     UMENG_KEY = "\"5ce65fbb570df380870007a0\""
     UMENG_NAME = "\"peach\""
 
-    //服务器配置
-    //开发
+    // 服务器配置
+    // 开发
     URL_DEBUG_ARRAY = "{" +
             "\"http://peach.qzappapia456.com/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"http://peach.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
     URL_ARRAY = "{" +
             "\"https://www.rpqcds.com/api/\"," +
             "\"https://www.bvffrf.com/api/\"," +
             "\"https://www.krnadL.com/api/\"" +
             "}"
-
 }
-
-
-
-
-

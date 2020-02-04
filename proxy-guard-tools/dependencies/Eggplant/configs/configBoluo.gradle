@@ -1,19 +1,18 @@
 gradle.ext {
-
-    //版本号
+    // 版本号
     VERSION_CODE = 19
-    //版本名
+    // 版本名
     VERSION_NAME = "1.2.1"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
     // 应用程序包名
     APPLICATION_ID = 'com.hello.boluo'
 
     MANIFESTPLACEHOLDERS = [
-            OPEN_INSTALL_APPKEY: "rubtnn",//  openInstall key
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "80c3905d43d7805acc77a895", //  极光 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            OPEN_INSTALL_APPKEY: "rubtnn",// openInstall key
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "80c3905d43d7805acc77a895", // 极光上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     SUPPORT_VERSION = "28.0.0"
@@ -22,31 +21,29 @@ gradle.ext {
     STORE_PASSWORD = '111111'
     KEY_ALIAS = 'key0'
     KEY_PASSWORD = '111111'
+
     //应用编号
     APP_CHANEL = "\"8\""
+
     // 友盟相关
-    UMENG_KEY = "\"5ce65e523fc195b7630001d6\""//友盟
+    UMENG_KEY = "\"5ce65e523fc195b7630001d6\""
     UMENG_NAME = "\"boluo\""
 
-
-    //服务器配置
-    //开发
+    // 服务器配置
+    // 开发
     URL_DEBUG_ARRAY = "{" +
-            //    "\"http://api.app.test/api/\"" +
-          //  "\"http://23.234.11.145:18081/api/\"" +
-               "\"https://boluo.qzappapia456.com/api/\"" +
-             // "\"https://www.4whvjo6.com/api/\"" +
+            "\"https://boluo.qzappapia456.com/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"https://boluo.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
     URL_ARRAY = "{" +
             "\"https://www.mqmuyh.com/api/\"," +
             "\"https://www.jojpyt.com/api/\"," +
             "\"https://www.hvmzxw.com/api/\"" +
             "}"
-
 }
-

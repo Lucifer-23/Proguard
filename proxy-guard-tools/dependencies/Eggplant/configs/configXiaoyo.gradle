@@ -1,48 +1,47 @@
 gradle.ext {
-
-    //版本号
+    // 版本号
     VERSION_CODE = 87
-    //版本名
+    // 版本名
     VERSION_NAME = "2.3.4"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
     // 应用程序包名
     APPLICATION_ID = 'com.helloworld.xiaoyo'
 
     MANIFESTPLACEHOLDERS = [
             OPEN_INSTALL_APPKEY: "i9ahhh",// openInstall
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "f39ce618cf9dc8bde2809446", //JPush 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "f39ce618cf9dc8bde2809446", // JPush上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     SUPPORT_VERSION = "28.0.0"
+
     // 签名相关
     STORE_FILE = 'configs/sign/xiaoyou2.jks'
     STORE_PASSWORD = '111111'
     KEY_ALIAS = 'key0'
     KEY_PASSWORD = '111111'
+
     // 友盟相关
     APP_CHANEL = "\"2\""
     UMENG_KEY = "\"5dc92ffc3fc195b4fc000a1d\""
     UMENG_NAME = "\"xiaoyo\""
 
+    // 测试环境
     URL_DEBUG_ARRAY = "{" +
-            //    "\"http://api.app.test/api/\"" +
-          //  "\"http://23.234.11.145:18081/api/\"" +
-               "\"http://10.64.32.56:801/api/\"" +
-              //"\"https://xiaoyou.qzappapia456.com/api/\"" +
+            "\"http://10.64.32.56:801/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"https://xiaoyou.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
     URL_ARRAY = "{" +
             "\"https://www.meyehkc.com/api/\"," +
             "\"https://www.rbuhzaq.com/api/\"," +
             "\"https://www.swiec15.com/api/\"" +
             "}"
-
-
 }

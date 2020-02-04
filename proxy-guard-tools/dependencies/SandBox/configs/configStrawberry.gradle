@@ -1,7 +1,7 @@
 gradle.ext {
-    //版本号
+    // 版本号
     VERSION_CODE = 93
-    //版本名
+    // 版本名
     VERSION_NAME = "2.3.2"
     // 应用程序包名
     APPLICATION_ID = 'com.wechats.strawberry'
@@ -15,9 +15,9 @@ gradle.ext {
     // 虚拟机APP对应的openInstall key(华为杀毒引擎会识别此key)
     OPENINSTALL = "\"f7fk26\""
 
-    //版本号
+    // 版本号
     PLAYER = "\"start.mp3\""
-    //包名
+    // 包名
     HOST = "\"com.hello.strawberry\""
 
     // 签名相关

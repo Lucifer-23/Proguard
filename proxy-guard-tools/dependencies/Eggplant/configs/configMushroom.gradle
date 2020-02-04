@@ -1,52 +1,50 @@
 gradle.ext {
-
-    //版本号
+    // 版本号
     VERSION_CODE = 13
-    //版本名
+    // 版本名
     VERSION_NAME = "1.2.0"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
     // 应用程序包名
     APPLICATION_ID = 'com.hello.mushroom'
 
     MANIFESTPLACEHOLDERS = [
-            OPEN_INSTALL_APPKEY: "jr1x5k",//  openInstall key
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "d57e476c7a0dc70fea1865bf", //  极光 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            OPEN_INSTALL_APPKEY: "jr1x5k",// openInstall key
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "d57e476c7a0dc70fea1865bf", // 极光上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     SUPPORT_VERSION = "28.0.0"
+
     // 签名相关
     STORE_FILE = 'configs/sign/mushroom.jks'
     STORE_PASSWORD = '111111'
     KEY_ALIAS = 'key0'
     KEY_PASSWORD = '111111'
-    //应用编号
+
+    // 应用编号
     APP_CHANEL = "\"13\""
+
     // 友盟相关
     UMENG_KEY = "\"5ce66007570df33574000ca8\""
     UMENG_NAME = "\"mushroom\""
 
-    //服务器配置
-    //开发
+    // 服务器配置
+    // 开发
     URL_DEBUG_ARRAY = "{" +
             "\"http://mogu.qzappapia456.com/api/\"" +
             "}"
+
     // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"http://mogu.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
     URL_ARRAY = "{" +
             "\"https://www.exhiaf.com/api/\"," +
             "\"https://www.sckamn.com/api/\"," +
             "\"https://www.egkj3s.com/api/\"" +
             "}"
-
 }
-
-
-
-
-

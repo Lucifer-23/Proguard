@@ -1,10 +1,9 @@
 gradle.ext {
-
     // 版本号
     VERSION_CODE = 18
     // 版本名
     VERSION_NAME = "2.1.0"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.5.0\""
 
     // application package name
@@ -13,37 +12,36 @@ gradle.ext {
     // OpenInstall APP KEY
     MANIFESTPLACEHOLDERS = [
             OPEN_INSTALL_APPKEY: "xczu8j",// openInstall
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "9da5c4d409c2a2816b59c03a", //JPush 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "9da5c4d409c2a2816b59c03a", // JPush上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
+
     // signature
-    STORE_FILE ='configs/sign/richkids.jks'
-    STORE_PASSWORD ='111111'
-    KEY_ALIAS ='key0'
-    KEY_PASSWORD  ='111111'
+    STORE_FILE = 'configs/sign/richkids.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
 
     // umeng
-    UMENG_KEY =  "\"5d43d8800cafb2df880006c6\""
-    UMENG_NAME =  "\"richkids\""
+    UMENG_KEY = "\"5d43d8800cafb2df880006c6\""
+    UMENG_NAME = "\"richkids\""
 
     // server config
     APP_CHANEL = "\"23\""
 
-
     // 测试环境
-    URL_DEBUG_ARRAY    = "{" +
-            // "\"https://banana.qzappapia456.com/api/\"" +
-               "\"https://gcf2d.qzappapia456.com/api/\"" +
+    URL_DEBUG_ARRAY = "{" +
+            "\"https://gcf2d.qzappapia456.com/api/\"" +
             "}"
 
-    // UAT 预生产环境 提测时用
+    // UAT预生产环境提测时用
     URL_UAT_ARRAY = "{" +
-          //  "\"http://api.9gbqkip.com:10801/api/\"" +
-             "\"https://gcf2d.qzappapia456.com/api/\"" +
+            "\"https://gcf2d.qzappapia456.com/api/\"" +
             "}"
+
     // 生产环境
-    URL_ARRAY=  "{" +
+    URL_ARRAY = "{" +
             "\"https://jk.n5nyla9m.com/api/\"," +
             "\"https://jk.xdr2488b.com/api/\"," +
             "\"https://jk.jx2g496c.com/api/\"" +

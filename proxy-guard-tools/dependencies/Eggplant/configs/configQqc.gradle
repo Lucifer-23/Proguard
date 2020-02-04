@@ -1,10 +1,9 @@
 gradle.ext {
-
     // 版本号
     VERSION_CODE = 52
     // 版本名
     VERSION_NAME = "1.1.2"
-    //服务器版本
+    // 服务器版本
     VERSION_SERVER = "\"1.4.3\""
     // application package name
     APPLICATION_ID = 'com.hello.qqc'
@@ -12,36 +11,38 @@ gradle.ext {
 
     MANIFESTPLACEHOLDERS = [
             OPEN_INSTALL_APPKEY: "hmxgte",// openInstall
-            JPUSH_PKGNAME : APPLICATION_ID,
-            JPUSH_APPKEY : "8cbf80de4a186b484e605af1", //JPush 上注册的包名对应的 Appkey.
-            JPUSH_CHANNEL : "developer" //暂时填写默认值即可.
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "8cbf80de4a186b484e605af1", // JPush上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
     ]
 
     // signature
-    STORE_FILE ='configs/sign/qqc.jks'
-    STORE_PASSWORD ='111111'
-    KEY_ALIAS ='key0'
-    KEY_PASSWORD  ='111111'
+    STORE_FILE = 'configs/sign/qqc.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
 
     // umeng
-    UMENG_KEY =  "\"5c822bd061f564f19800158e\""
-    UMENG_NAME =  "\"qqc\""
+    UMENG_KEY = "\"5c822bd061f564f19800158e\""
+    UMENG_NAME = "\"qqc\""
     GAME_KEY = "\"xhi#\$5.te1@4_69^D(s0s93o\""
+
     // server config
     APP_CHANEL = "\"3\""
-    URL_ARRAY=  "{" +
-                  "\"http://www.qqcapi1.com/api/\"," +
-                  "\"http://www.qqcapi2.com/api/\"," +
-                  "\"http://www.qqcapi3.com/api/\"" +
-                 "}"
 
+    // 生产环境
+    URL_ARRAY = "{" +
+            "\"http://www.qqcapi1.com/api/\"," +
+            "\"http://www.qqcapi2.com/api/\"," +
+            "\"http://www.qqcapi3.com/api/\"" +
+            "}"
 
-
-    URL_DEBUG_ARRAY    = "{" +
-//            "\"http://10.64.32.56:801/api/\"" +
+    // 测试环境
+    URL_DEBUG_ARRAY = "{" +
             "\"http://qqc.qzappapia456.com/api/\"" +
             "}"
 
+    // UAT环境
     URL_UAT_ARRAY = "{" +
             "\"https://qqc.qzappapia456.com/api/\"" +
             "}"

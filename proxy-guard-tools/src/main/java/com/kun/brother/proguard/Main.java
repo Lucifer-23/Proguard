@@ -13,7 +13,7 @@ import java.io.RandomAccessFile;
 
 public class Main {
 
-    private static String product = AES.PRODUCT_SANDBOX;
+    private static String product = AES.PRODUCT_EGGPLANT;
 
     public static void main(String[] args) throws Exception {
         /**
