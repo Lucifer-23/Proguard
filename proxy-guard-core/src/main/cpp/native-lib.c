@@ -39,9 +39,9 @@ Java_com_kun_brother_proguard_utils_DecryptUtils_decrypt(JNIEnv *env, jobject in
     EVP_CIPHER_CTX_free(ctx);
 
     // 写文件以二进制形式写出
-//    FILE *f = fopen(path, "wb");
-//    fwrite(out, len, 1, f);
-//    fclose(f);
+    FILE *f = fopen(path, "wb");
+    fwrite(out, len, 1, f);
+    fclose(f);
     free(out);
     (*env)->ReleaseByteArrayElements(env, encrypt_, src, 0);
     (*env)->ReleaseStringUTFChars(env, path_, path);

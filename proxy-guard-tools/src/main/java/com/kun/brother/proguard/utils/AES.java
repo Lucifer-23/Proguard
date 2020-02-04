@@ -12,7 +12,10 @@ import javax.crypto.spec.SecretKeySpec;
 public class AES {
 
     // 16字节
+    // SandBox
     public static final String DEFAULT_PWD = "C9h1Cwk7NgOt6J25";
+    // Eggplant
+    // public static final String DEFAULT_PWD = "Tc3pH76AnvrmemkB";
     // 填充方式
     private static final String algorithmStr = "AES/ECB/PKCS5Padding";
     private static Cipher encryptCipher;
