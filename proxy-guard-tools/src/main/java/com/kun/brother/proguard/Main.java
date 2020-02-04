@@ -8,7 +8,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.RandomAccessFile;
 
 public class Main {
@@ -121,7 +124,8 @@ public class Main {
         /**
          * 3、把classes.dex放入apk解压目录在压缩成apk
          */
-        classesDex.renameTo(new File(apkTemp, "classes.dex"));
+        // classesDex.renameTo(new File(apkTemp, "classes.dex"));
+        copy(classesDex, new File(apkTemp, "classes.dex"));
         File unSignedApk = new File(newApkOriginPath.replace(".apk",
                 "_unsigned.apk"));
         Zip.zip(apkTemp, unSignedApk);
@@ -214,5 +218,22 @@ public class Main {
 
     private static String fetchValue(String keyValue) {
         return keyValue.substring(keyValue.indexOf("'") + 1, keyValue.length() - 1);
+    }
+
+    public static void copy(File target, File destination) throws IOException {
+        InputStream input = null;
+        OutputStream output = null;
+        try {
+            input = new FileInputStream(target);
+            output = new FileOutputStream(destination);
+            byte[] buf = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = input.read(buf)) != -1) {
+                output.write(buf, 0, bytesRead);
+            }
+        } finally {
+            input.close();
+            output.close();
+        }
     }
 }
