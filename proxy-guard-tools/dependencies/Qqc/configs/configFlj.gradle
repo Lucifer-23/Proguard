@@ -1,0 +1,46 @@
+gradle.ext {
+
+    VERSION_CODE = 58
+
+    // 版本名
+    VERSION_NAME = "1.2.4"
+
+    // application package name
+    APPLICATION_ID = 'com.welfare.wji'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "fwfo2m",// openInstall
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "8cbf80de4a186b484e605af1", // JPush上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
+    ]
+
+    // signature
+    STORE_FILE = 'configs/sign/flj.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+
+    // umeng
+    UMENG_KEY = "\"5e16a0cfcb23d234ed000322\""
+    UMENG_NAME = "\"flj\""
+
+    // server config
+    APP_CHANEL = "\"23\""
+    URL_ARRAY = "{" +
+            "\"https://jk.dpem1z98.com/api/\"," +
+            "\"https://jk.pyz00hw9.com/api/\"," +
+            "\"https://jk.grrnu928.com/api/\"" +
+            "}"
+
+    URL_DEBUG_ARRAY = "{" +
+            "\"http://10.64.32.167:8010/api/\"" +
+            "}"
+
+    URL_UAT_ARRAY = "{" +
+            "\"http://fljapi.qzappapia456.com/api/\"" +
+            "}"
+
+    // 支付渠道ID，默认为1
+    CHANNEL_ID = "\"1\""
+}

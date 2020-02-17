@@ -25,17 +25,19 @@ public class Main {
         File classesDex = jar2dex();
 
         AES.init(AES.getPwd(product));
-        deleteFile(new File("proxy-guard-tools/apk/" + product));
 
         File targetApkRootDir = new File("proxy-guard-tools/target/" + product);
         File[] productFlavorDirs = targetApkRootDir.listFiles();
         for (File productFlavor : productFlavorDirs) {
             File productFlavorRelease = new File(productFlavor.getAbsolutePath(), "release");
             if (productFlavorRelease.exists()) {
+                String flavor = productFlavor.getName();
                 File[] outputs = productFlavorRelease.listFiles();
+                if (outputs.length > 1) {
+                    deleteFile(new File("proxy-guard-tools/apk/" + product + File.separator + flavor));
+                }
                 for (File file : outputs) {
                     if (file.getName().endsWith("apk")) {
-                        String flavor = productFlavor.getName();
                         File apkTemp = new File("proxy-guard-tools/apk/" + product + File.separator + flavor + "/temp");
                         String newApkOriginPath = "proxy-guard-tools/apk/"
                                 + product

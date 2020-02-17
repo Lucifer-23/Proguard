@@ -1,0 +1,46 @@
+gradle.ext {
+
+    VERSION_CODE = 60
+
+    // 版本名
+    VERSION_NAME = "1.2.5"
+
+    // application package name
+    APPLICATION_ID = 'cn.net.tokyo.ccg'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "vcdfi2",// openInstall
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "59ef45ff96685cf92bcf1bdb", // JPush上注册的包名对应的Appkey.
+            JPUSH_CHANNEL      : "developer" // 暂时填写默认值即可.
+    ]
+
+    // signature
+    STORE_FILE = 'configs/sign/qqc.jks'
+    STORE_PASSWORD = 'ccg@123'
+    KEY_ALIAS = 'ccggcc'
+    KEY_PASSWORD = 'ccg@321'
+
+    // umeng
+    UMENG_KEY = "\"5e392da3570df358b300024b\""
+    UMENG_NAME = "\"ccg\""
+
+    // server config
+    APP_CHANEL = "\"3\""
+    URL_ARRAY = "{" +
+            "\"https://jk.eyzee2.com/api/\"," +
+            "\"https://jk.py49ri.com/api/\"," +
+            "\"https://www.suouq8u.com/api/\"" +
+            "}"
+
+    URL_DEBUG_ARRAY = "{" +
+            "\"http://qqcnewapi.qzappapia456.com/api/\"" +
+            "}"
+
+    URL_UAT_ARRAY = "{" +
+            "\"http://10.64.32.167:8010/api/\"" +
+            "}"
+
+    // 支付渠道ID，默认为1
+    CHANNEL_ID = "\"1\""
+}

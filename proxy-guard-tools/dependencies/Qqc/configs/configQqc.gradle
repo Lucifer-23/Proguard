@@ -1,0 +1,51 @@
+gradle.ext {
+
+    VERSION_CODE = 60
+
+    // 版本名
+    VERSION_NAME = "1.2.5"
+
+    // application package name
+    APPLICATION_ID = 'com.hello.qqc'
+
+    MANIFESTPLACEHOLDERS = [
+            OPEN_INSTALL_APPKEY: "hmxgte",// openInstall
+            JPUSH_PKGNAME      : APPLICATION_ID,
+            JPUSH_APPKEY       : "8cbf80de4a186b484e605af1", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL      : "developer" //暂时填写默认值即可.
+    ]
+
+    // signature
+    STORE_FILE = 'configs/sign/oldqqc.jks'
+    STORE_PASSWORD = '111111'
+    KEY_ALIAS = 'key0'
+    KEY_PASSWORD = '111111'
+
+    // umeng
+    UMENG_KEY = "\"5c822bd061f564f19800158e\""
+    UMENG_NAME = "\"qqc\""
+    GAME_KEY = "\"xhi#\$5.te1@4_69^D(s0s93o\""
+    // server config
+    APP_CHANEL = "\"3\""
+    URL_ARRAY = "{" +
+            "\"https://jk.eyzee2.com/api/\"," +
+            "\"https://jk.py49ri.com/api/\"," +
+            "\"https://www.suouq8u.com/api/\"" +
+            "}"
+
+    GAME_KEY = "\"xhi#\$5.te1@4_69^D(s0s93o\""
+
+    URL_DEBUG_ARRAY = "{" +
+//            "\"http://10.64.32.233:8070/api/\"" +
+//            "\"http://10.64.32.167:8010/api/\"" +
+            "\"http://qqcnewapi.qzappapia456.com/api/\"" +
+            "}"
+
+    URL_UAT_ARRAY = "{" +
+            //   "\"https://qqcnewapi.qzappapia456.com/api/\"" +
+            "\"http://10.64.32.167:8010/api/\"" +
+            "}"
+
+    // 支付渠道ID，默认为1
+    CHANNEL_ID = "\"1\""
+}

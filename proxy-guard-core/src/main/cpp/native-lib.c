@@ -6,7 +6,7 @@
 #include <openssl/evp.h>
 
 // 密钥
-static uint8_t *userkey = "Tc3pH76AnvrmemkB";
+static uint8_t *userkey = "b9R3jMvsJ4mmMgIV";
 
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, "NDK", __VA_ARGS__)
 

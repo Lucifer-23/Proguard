@@ -18,6 +18,8 @@ public class AES {
     public static final String PRODUCT_SANDBOX      = "SandBox";
     // 茄子产品
     public static final String PRODUCT_EGGPLANT     = "Eggplant";
+    // 青青草产品
+    public static final String PRODUCT_QQC          = "Qqc";
 
     /**
      * 相关产品对应的密码常量
@@ -26,6 +28,8 @@ public class AES {
     public static final String PWD_PRODUCT_SANDBOD      = "C9h1Cwk7NgOt6J25";
     // Eggplant
     public static final String PWD_PRODUCT_EGGPLANT     = "Tc3pH76AnvrmemkB";
+    // QQC
+    public static final String PWD_PRODUCT_QQC          = "b9R3jMvsJ4mmMgIV";
 
     // 填充方式
     private static final String algorithmStr = "AES/ECB/PKCS5Padding";
@@ -83,6 +87,9 @@ public class AES {
                 break;
             case PRODUCT_EGGPLANT:
                 pwd = PWD_PRODUCT_EGGPLANT;
+                break;
+            case PRODUCT_QQC:
+                pwd = PWD_PRODUCT_QQC;
                 break;
         }
         return pwd;
